@@ -1,8 +1,9 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+   ViewBag.Title = "Countries List";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Countries List</h2>
+<ul>
+@foreach(string country in (List<string>)ViewData["Countries"]){
+   <li>@country</li>
+}
+</ul>
