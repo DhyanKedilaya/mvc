@@ -15,7 +15,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-
+        ViewData["Countries"] = new List<string>{
+    "India",
+    "Malaysia",
+    "Dubai",
+    "USA",
+    "UK"
+     };
 
         return View();
     }
